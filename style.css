@@ -10,6 +10,7 @@ body {
 .container {
     height: 96vh;
     padding: 2em;
+    padding-top: 3em;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -25,12 +26,16 @@ body {
     text-align: center;
 }
 
-.line {
+.hline {
     text-align: center;
     width: 50%;
     border-top: 2px solid #64FFDA;
     margin: 0.2em 0;
     margin-bottom: 1em;
+}
+
+.vline {
+    display: none;
 }
 
 .description {
@@ -42,28 +47,33 @@ body {
 }
 
 .navbar {
-    height: auto;
+    height: 45%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    justify-content: space-around;
     align-items: stretch;
     text-align: center;
     margin-top: 1em;
 }
 
-.nav {
+.nav{
     color: #64FFDA;
     font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     font-size: 18px;
     font-weight: 200;
     border: 2px solid #64FFDA;
     border-radius: 7px;
-    padding: 2.4vmin;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
 }
 
 a {
     text-decoration: none;
+}
+
+a div:hover {
+    border-radius: 7px;
+    background-color: #64ffdb28;
+    transition-duration: 0.5s;
 }
 
 footer {
@@ -71,4 +81,58 @@ footer {
     font-size: 10px;
     text-align: center;
     color: #97A0BE;
+}
+
+@media screen and (min-width: 760px) {
+
+    .main-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hline {
+        display: none;
+    }
+
+    .vline {
+        display: block;
+        border-right: 5px solid #64FFDA;
+        text-align: center;
+        width: 50px;
+        height: 40vh;
+        margin-left: 50px;
+        margin-right: 25px;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        padding: 2em;
+    }
+
+    a {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .navbar {
+        flex-flow: row nowrap;
+        height: auto;
+        width: 48vw;
+        margin-bottom: 1em;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .navbar > * {
+        flex-basis: 1;
+        flex-grow: 1;
+    }
+
+    footer {
+        width: 100%;
+    }
 }
