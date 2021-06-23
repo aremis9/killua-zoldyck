@@ -24,7 +24,7 @@ body {
     font-size: clamp(40px, 8vw, 80px);
     color: #E1E7FB;
     text-align: center;
-}
+}   
 
 .hline {
     text-align: center;
