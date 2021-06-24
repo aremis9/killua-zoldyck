@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #04061C;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.logo {
+    font-family: "Calibre", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 30px);
+    color: #E1E7FB;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 0;
+    margin: 0 3.5vw 0 0;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    margin: 25px;
+    font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-weight: 200;
+    font-size: clamp(12px, 2.4vw, 18px);
+    color: #E1E7FB;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+a.navlink{
+    margin-left: clamp(25px, 3.5vw, 3.5vw);
+}
+
+ul .navlink {
+    display: block;
+    margin-left: 3vw;
+}
+
+.burger, .navspace {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        height: 100vh;
+        flex-flow: column; /* onburger- column */
+    }
+
+    ul {
+        display: flex;  /* onburger- flex*/
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        width: 100vw;
+    }
+
+    ul a, ul li {
+        font-size: max(30px, 8vw);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 50vw;
+    }
+
+    .navspace {
+        display: block;
+        flex: 1 0;
+    }
+
+    .burger{
+        height: 69px;
+        width: 69px;
+        order: -1; /*onburger- -1 */
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: 20px; */ /*onburger- 0*/
+    }
+
+    .burger span {
+        width: 38px;
+        border-top: 3px solid white;
+        margin: 4px 0;
+    }
+
+}
