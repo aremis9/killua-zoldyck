@@ -35,7 +35,7 @@ ul {
 
 li {
     list-style: none;
-    margin: 25px;
+    padding: 25px;
     font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     font-weight: 200;
     font-size: clamp(12px, 2.4vw, 18px);
@@ -45,6 +45,11 @@ li {
 a {
     display: block;
     text-decoration: none;
+}
+
+span:hover, li:hover {
+    color: #64FFDA;
+    transition: 0.5s;
 }
 
 div .navlink{
@@ -60,11 +65,13 @@ ul .navlink {
     display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 
     .navbar {
-        height: 100vh; /*onburger- height: 100vh */
+        height: auto; /*onburger- height: 100vh */
         flex-flow: column;
+        position: relative;
+        transition: ease-in-out 0.3s;
     }
 
     .topnav {
@@ -76,9 +83,9 @@ ul .navlink {
     }
 
 
-    ul {
-        background-color: #04061c8e;
-        display: flex;  /* onburger- flex*/
+    .navlinks {
+        background-color: #04061c96;
+        display: none;
         flex-flow: column;
         justify-content: space-evenly;
         align-items: center;
@@ -89,6 +96,7 @@ ul .navlink {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
 
     ul .navlink, ul li {
         font-size: max(30px, 8vw);
@@ -119,4 +127,8 @@ ul .navlink {
         margin: 4px 0;
     }
 
+}
+
+.ghost {
+    display: none;
 }

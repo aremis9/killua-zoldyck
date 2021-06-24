@@ -66,11 +66,19 @@ body {
     padding: 0.5rem;
 }
 
+.home {
+    background-color: #64ffdbcc;
+    color: #04061C;
+    font-weight: 300;
+    transition-duration: 0.5s;
+}
+
 a {
     text-decoration: none;
 }
 
 a div:hover {
+    color: #64FFDA;
     border-radius: 7px;
     background-color: #64ffdb28;
     transition-duration: 0.5s;
