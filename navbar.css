@@ -9,6 +9,7 @@ body {
 }
 
 .navbar {
+    background-color: #04061C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +47,7 @@ a {
     text-decoration: none;
 }
 
-a.navlink{
+div .navlink{
     margin-left: clamp(25px, 3.5vw, 3.5vw);
 }
 
@@ -62,25 +63,38 @@ ul .navlink {
 @media screen and (max-width: 700px) {
 
     .navbar {
-        height: 100vh;
-        flex-flow: column; /* onburger- column */
+        height: 100vh; /*onburger- height: 100vh */
+        flex-flow: column;
     }
 
+    .topnav {
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     ul {
+        background-color: #04061c8e;
         display: flex;  /* onburger- flex*/
         flex-flow: column;
         justify-content: space-evenly;
         align-items: center;
-        margin: 0;
-        width: 100vw;
+        width: 90vw;
+        margin: 0 5vw 5vw 5vw;
+        border: 2px solid #E1E7FB;
+        border-top: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
-    ul a, ul li {
+    ul .navlink, ul li {
         font-size: max(30px, 8vw);
         text-align: center;
         padding: 0;
         margin: 0;
-        width: 50vw;
     }
 
     .navspace {
@@ -91,17 +105,17 @@ ul .navlink {
     .burger{
         height: 69px;
         width: 69px;
-        order: -1; /*onburger- -1 */
+        order: 1;
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        /* margin-right: 20px; */ /*onburger- 0*/
+        margin-right: 20px;
     }
 
     .burger span {
         width: 38px;
-        border-top: 3px solid white;
+        border-top: 3px solid #E1E7FB;
         margin: 4px 0;
     }
 
