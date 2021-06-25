@@ -33,7 +33,7 @@
     transition-duration: 0.5s;
 }
 
-a div:hover {
+.button div:hover {
     color: #64FFDA;
     border-radius: 7px;
     background-color: #64ffdb28;
