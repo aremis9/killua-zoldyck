@@ -8,12 +8,19 @@ body {
     padding: 0;
 }
 
+body * {
+    transition: ease-in-out 1s;
+}
+
 .navbar {
     background-color: #04061C;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 8px;
+    box-shadow: 0 -4px 20px 1px #64ffdb5e;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .logo {
@@ -23,6 +30,7 @@ body {
     font-size: clamp(22px, 3vw, 30px);
     color: #E1E7FB;
     text-align: center;
+    transition: 0.5s ease-in-out;
 }
 
 ul {
@@ -40,6 +48,7 @@ li {
     font-weight: 200;
     font-size: clamp(12px, 2.4vw, 18px);
     color: #E1E7FB;
+    transition: 0.5s ease-in-out;
 }
 
 a {
@@ -47,13 +56,21 @@ a {
     text-decoration: none;
 }
 
-span:hover, li:hover {
+.burger:hover, li:hover {
     color: #64FFDA;
-    transition: 0.5s;
+    text-decoration: underline #64FFDA;
+    text-underline-offset: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover {
+    color: #64FFDA;
+    transition: 0.2s ease-in;
+    font-size: calc(clamp(22px, 3vw, 30px) + 3px);
 }
 
 div .navlink{
-    margin-left: clamp(25px, 3.5vw, 3.5vw);
+    margin-left: clamp(35px, 4vw, 6vw);
 }
 
 ul .navlink {
@@ -63,6 +80,11 @@ ul .navlink {
 
 .burger, .navspace {
     display: none;
+}
+
+.currentpage {
+    text-decoration: underline #64FFDA;
+    text-underline-offset: 10px;
 }
 
 @media screen and (max-width: 760px) {
@@ -92,9 +114,11 @@ ul .navlink {
         width: 90vw;
         margin: 0 5vw 5vw 5vw;
         border: 2px solid #E1E7FB;
-        border-top: none;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 0 -4px 20px 1px #64ffdb4b;
     }
 
 
