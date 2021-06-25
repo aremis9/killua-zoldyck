@@ -1,0 +1,36 @@
+.content {
+    height: calc(100vh - 77px);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto 5vw;
+}
+
+img {
+    width: 50%;
+    margin-top: min(5vh, 6vh, 8vh);
+    margin-bottom: min(5vh, 6vh, 8vh);
+    align-self: center;
+}
+
+.profileinfo {
+    font-family: "Calibre", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-weight: 600;
+    font-size: clamp(30px, 5vw, 50px);
+    color: #E1E7FB;
+    text-align: center;
+    padding: 25px;
+    padding-top: 0;
+}
+
+@media screen and (min-width: 760px) {
+    .content {
+        flex-flow: row nowrap;
+        height: calc(100vh - 79px);
+    }
+
+    img {
+        width: 40%;
+    }
+}

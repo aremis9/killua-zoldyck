@@ -1,0 +1,68 @@
+.content {
+    height: calc(100vh - 77px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
+}
+
+.second {
+    order: -1;
+    margin-top: 10vh;
+}
+
+.sayhi {
+    text-align: center;
+    background-color: #64ffdbcc;
+    color: #04061C;
+    font-weight: 300;
+    transition-duration: 0.5s;
+    font-family: "Calibre","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #64FFDA;
+    border-radius: 7px;
+    padding: 1rem;
+    transition-duration: 0.5s;
+}
+
+a div:hover {
+    color: #64FFDA;
+    border-radius: 7px;
+    background-color: #64ffdb28;
+    transition-duration: 0.5s;
+}
+
+img {
+    height: 50vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media screen and (min-width: 760px) {
+    .content {
+        height: calc(100vh - 79px);
+        flex-flow: row;
+    }
+
+    .first {
+        order: -1;
+    }
+
+    .second {
+        margin-top: 0;
+    }
+
+    img {
+        height: 80vh;
+    }
+}
