@@ -1,2 +1,2 @@
 # killua-zoldyck
-Finctional character's portfolio
+Fictional character's portfolio
